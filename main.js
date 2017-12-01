@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.support.cors = true;
     $.ajax({
-        url: "http://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarkets",
+        url: "https://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarkets",
         type: 'GET',
         dataType: 'json',
         method: 'jsonp',
