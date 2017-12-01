@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.support.cors = true;
     $.ajax({
-        url: "https://bittrex.com/api/v1.1/public/getmarkets",
+        url: "http://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarkets",
         type: 'GET',
         dataType: 'json',
         method: 'jsonp',
@@ -22,3 +22,6 @@ $(document).ready(function(){
 });
 
 //https://bittrex.com/api/v1.1/public/getmarkets
+//http://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarkets
+
+//http://cors.io/?u=https://blockchain.info/stats?format=json
