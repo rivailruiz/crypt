@@ -1,19 +1,23 @@
 $(document).ready(function(){
     $.support.cors = true;
     $.ajax({
-        url: "https://cors.io/?u=https://bittrex.com/api/v1.1/public/getmarkets",
+        url: "https://bittrex.com/api/v1.1/public/getmarkets",
         type: 'GET',
         dataType: 'json',
         method: 'jsonp',
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Origin': 'https://rivailruiz.github.io'
-        },
         // beforeSend: function (xhr) {
         //     xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
         // },
         success: function (data){
-          console.log(data);
+          var contador = data.result.length
+            data = data.result;
+          for (var i = 0; i < contador; i++){
+              var item = data[i];
+                // console.log(item);
+                
+              $('.container').append('<div class="col-md-2"><h3>'+item.MarketCurrencyLong+'</h3><img src="'+item.LogoUrl+'" alt=""><p>Minimo trade: <span>'+item.MinTradeSize+'</span></p></div>')
+             
+          }
         },
         error: function(error){
             console.log(error);
