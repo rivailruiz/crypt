@@ -6,7 +6,8 @@ $(document).ready(function(){
         dataType: 'json',
         method: 'jsonp',
         headers: {
-            'Access-Control-Allow-Origin': '*'
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': 'https://rivailruiz.github.io'
         },
         // beforeSend: function (xhr) {
         //     xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
